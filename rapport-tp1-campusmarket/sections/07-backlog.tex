@@ -1,0 +1,24 @@
+﻿\chapter{Backlog initial}
+
+Le backlog initial est présenté ci-dessous selon les phases retenues pour le projet.
+
+\begin{table}[ht]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{>{\bfseries}c X c c X}
+\toprule
+\textbf{ID} & \textbf{Tâche} & \textbf{Semaine} & \textbf{Prédécesseurs} & \textbf{Responsable principal} \\
+\midrule
+T1 & Analyse : identification et validation des besoins, analyse des acteurs, rédaction des exigences et définition du périmètre. & Semaine 1 & -- & Product Owner \\
+T2 & Conception : préparation des éléments de conception. & Semaine 2 & T1 & Architecte \\
+T3 & Développement backend : mise en place de l'environnement, authentification, gestion des utilisateurs, annonces, catalogue, recherche et filtres, disponibilité. & Semaine 3 & T2 & Développeur Backend \\
+T4 & Développement backend : suite du développement backend et finalisation de la logique métier. & Semaine 4 & T3 & Développeur Backend \\
+T5 & Développement frontend : interfaces utilisateur, intégration avec le backend, prise de contact externe et modération. & Semaine 5 & T4 & Développeur Frontend / Équipe \\
+T6 & Tests et Validation : tests des fonctionnalités, corrections et validation. & Semaine 6 & T5 & Toute l'équipe \\
+T7 & Déploiement et Maintenance : déploiement de l'application et actions de maintenance préliminaires. & Semaine 6 & T6 & Tech Lead / Équipe \\
+T8 & Présentation : préparation et présentation du projet. & Semaine 7 & T7 & Scrum Master / Toute l'équipe \\
+\bottomrule
+\end{tabularx}
+\caption{Backlog initial}
+\end{table}

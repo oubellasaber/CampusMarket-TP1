@@ -1,0 +1,88 @@
+﻿\chapter{Planification prévisionnelle du projet (Gantt) et chemin critique}
+
+\section{Planification par phases}
+
+La planification s'étend sur six semaines de réalisation, avec une septième semaine consacrée exclusivement à la préparation et à la présentation du projet.
+
+Les phases retenues sont les suivantes :
+
+\begin{enumerate}
+  \item \textbf{Analyse} (T1) : identification et validation des besoins, analyse des acteurs, rédaction des exigences et définition du périmètre.
+  \item \textbf{Conception} (T2) : préparation des éléments de conception.
+  \item \textbf{Développement backend} (T3 -- T4) : développement de la partie serveur (authentification, gestion des utilisateurs, annonces, catalogue, recherche/filtres, disponibilité).
+  \item \textbf{Développement frontend} (T5) : développement des interfaces et intégration avec le backend (contact externe, modération).
+  \item \textbf{Tests et Validation} (T6) : tests des fonctionnalités, corrections et validation.
+  \item \textbf{Déploiement et Maintenance} (T7) : déploiement et actions de maintenance préliminaires.
+  \item \textbf{Présentation} (T8) : préparation et présentation du projet (Semaine 7).
+\end{enumerate}
+
+\section{Tâches, durées, prédécesseurs et responsables}
+
+Le tableau ci-dessous présente le détail des tâches.
+
+\begin{table}[ht]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{>{\bfseries}c X c c X}
+\toprule
+\textbf{ID} & \textbf{Tâche} & \textbf{Durée estimée} & \textbf{Prédécesseurs} & \textbf{Responsable principal} \\
+\midrule
+T1 & Analyse : besoins, acteurs, exigences et périmètre & 1 semaine & -- & Product Owner \\
+T2 & Conception & 1 semaine & T1 & Architecte \\
+T3 & Développement backend -- Partie 1 & 1 semaine & T2 & Développeur Backend \\
+T4 & Développement backend -- Partie 2 & 1 semaine & T3 & Développeur Backend \\
+T5 & Développement frontend & 1 semaine & T4 & Développeur Frontend / Équipe \\
+T6 & Tests et Validation & 1 semaine & T5 & Toute l'équipe \\
+T7 & Déploiement et Maintenance & 1 semaine & T6 & Tech Lead / Équipe \\
+T8 & Présentation : préparation et présentation du projet & 1 semaine (S7) & T7 & Scrum Master / Toute l'équipe \\
+\bottomrule
+\end{tabularx}
+\caption{Tâches, durées, prédécesseurs et responsables}
+\end{table}
+
+\section{Planification prévisionnelle (Diagramme de Gantt)}
+
+La figure ci-dessous présente la planification prévisionnelle sur 7 semaines (S1 -- S7).
+
+\begin{ganttchart}[
+  hgrid,
+  vgrid,
+  x unit=1.6cm,
+  y unit chart=0.55cm,
+  bar/.append style={fill=blue!30},
+  bar incomplete/.append style={fill=blue!15},
+  title/.append style={fill=gray!10},
+  title label font=\small\bfseries,
+  bar label font=\small,
+  group label font=\small\bfseries
+]{1}{7}
+  \gantttitle{S1}{1}
+  \gantttitle{S2}{1}
+  \gantttitle{S3}{1}
+  \gantttitle{S4}{1}
+  \gantttitle{S5}{1}
+  \gantttitle{S6}{1}
+  \gantttitle{S7}{1} \\
+
+  \ganttbar{T1 - Analyse}{1}{1} \\
+  \ganttbar{T2 - Conception}{2}{2} \\
+  \ganttbar{T3 - Dév. backend Partie 1}{3}{3} \\
+  \ganttbar{T4 - Dév. backend Partie 2}{4}{4} \\
+  \ganttbar{T5 - Dév. frontend}{5}{5} \\
+  \ganttbar{T6 - Tests et Validation}{6}{6} \\
+  \ganttbar{T7 - Déploiement et Maintenance}{6}{6} \\
+  \ganttbar{T8 - Présentation}{7}{7}
+\end{ganttchart}
+\caption{Planning prévisionnel (Gantt) sur 7 semaines (S1--S7)}
+\label{gantt:planning}
+
+\section{Chemin critique}
+
+Le chemin critique déterminant la durée minimale du projet est le suivant :
+
+\begin{center}
+\textbf{T1 $\to$ T2 $\to$ T3 $\to$ T4 $\to$ T5 $\to$ T6 $\to$ T7 $\to$ T8}
+\end{center}
+
+\textbf{Interprétation :} tout retard sur une tâche appartenant à ce chemin critique entraînerait, sans réorganisation du travail, un retard équivalent sur la livraison finale.
