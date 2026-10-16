@@ -1,0 +1,21 @@
+﻿# LaTeX build files
+*.aux
+*.log
+*.toc
+*.out
+*.lot
+*.lof
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+*.nav
+*.snm
+*.vrb
+
+# Temporary
+*.tmp
+.DS_Store
+Thumbs.db
